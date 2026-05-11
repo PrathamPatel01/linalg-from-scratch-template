@@ -14,7 +14,7 @@ Why this file lives next to `test_matrix.py`: that file checks the
 TODOs you're going to implement. This one is for *learning* — getting
 a feel for the data model before you change anything. There is no
 chapter marker because every test is intended to pass before chapter 1
-TODOs are written.
+TODOs are written.uv
 
 Two helpers from `matrix.debug` (also re-exported as `matrix.dump_raw`
 and `matrix.memory_bytes`) are used below:
@@ -40,6 +40,8 @@ from matrix import Matrix, dump_raw, memory_bytes
 # Construction — verify the provided machinery works
 # ----------------------------------------------------------------------
 
+
+print('heyy')
 
 def test_primary_constructor_takes_list_of_lists():
     """Matrix([[...]]) is the NumPy-style primary form."""

@@ -135,6 +135,12 @@ class Matrix:
     def __getitem__(self, key: tuple[int, int]) -> float:
         # TODO 1.1: return self.data at flat index i*cols + j.
         # Raise IndexError if i or j is out of range.
+        i = key[0]
+        j = key[1]
+
+        index_first = i * self.cols + j
+        matrix_element = self.data[index_first]
+        return matrix_element
         raise NotImplementedError("TODO 1.1 — implement __getitem__")
 
     def __setitem__(self, key: tuple[int, int], value: float) -> None:
