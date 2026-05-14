@@ -143,10 +143,22 @@ class Matrix:
         return matrix_element
         raise NotImplementedError("TODO 1.1 — implement __getitem__")
 
+
     def __setitem__(self, key: tuple[int, int], value: float) -> None:
-        # TODO 1.2: assign self.data[i*cols + j] = value.
-        # Raise IndexError if i or j is out of range.
-        raise NotImplementedError("TODO 1.2 — implement __setitem__")
+        i, j = key
+
+        # Bounds check
+        if i < 0 or i >= self.rows or j < 0 or j >= self.cols:
+            raise IndexError("Matrix index out of range")
+
+        # Row-major flat index
+        index = i * self.cols + j
+        self.data[index] = value
+
+    # def __setitem__(self, key: tuple[int, int], value: float) -> None:
+    
+    #     # Raise IndexError if i or j is out of range.
+    #     raise NotImplementedError("TODO 1.2 — implement __setitem__")
 
     # ------------------------------------------------------------------
     # Chapter 1 — equality and repr (TODO)
